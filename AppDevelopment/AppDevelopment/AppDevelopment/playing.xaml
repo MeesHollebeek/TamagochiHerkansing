@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppDevelopment.playing">
+    <ContentPage.Content>
+        <StackLayout>
+            <FlexLayout Direction="Column">
+
+                <Image
+                x:Name="Background"
+                Source="Background.png" 
+                Scale="6"/>
+                <Image
+                x:Name="rutten"
+                Source="rutte2.png"            
+                    Scale="1"/>
+
+            </FlexLayout>
+
+            <Label
+                TextColor="MediumPurple"
+                Text="Mark Rutte status:"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                 />
+                <Label Text="{Binding HungerText, Mode=OneWay}" FontSize="24"  HorizontalOptions="Center"  TextColor="Green"/>
+                <Label Text="{Binding SpinText, Mode=OneWay}" FontSize="24"  HorizontalOptions="Center"  TextColor="IndianRed"/>
+            <Button Text="play"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked= "spin" />
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
